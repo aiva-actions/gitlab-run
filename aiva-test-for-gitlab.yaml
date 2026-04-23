@@ -1,0 +1,11 @@
+spec:
+  inputs:
+    labels:
+      default: ""
+
+aiva-test:
+  stage: test
+  image: node
+  script:
+    - "npm install github:aiva-actions/runner#initial-version"
+    - npx runner -l $[[ inputs.labels ]] -k $AIVA_API_KEY
