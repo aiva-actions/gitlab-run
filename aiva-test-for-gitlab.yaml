@@ -3,4 +3,4 @@ aiva-test:
   image: node
   script:
     - "npm install github:aiva-actions/runner#initial-version"
-    - npx runner -l $[[ inputs.labels ]] -k $AIVA_API_KEY
+    - npx runner -l $[[ inputs.aiva-labels ]] -k $AIVA_API_KEY -n $[[ inputs.aiva-max-number-of-agents ]] -b $[[ inputs.aiva-batch-name ]] --global-variables-overrides $[[ inputs.aiva-gloval-variables-overrides ]] --variables-overrides-per-test $[[ inputs.aiva-variables-overrides-per-test ]] -g $[[ inputs.aiva-gateway-name ]]
