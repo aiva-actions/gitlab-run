@@ -1,8 +1,3 @@
-spec:
-  inputs:
-    labels:
-      default: ""
-
 aiva-test:
   stage: test
   image: node
